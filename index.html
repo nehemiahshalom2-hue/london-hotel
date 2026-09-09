@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Hotel & Apartments | Luxury Stays</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">London Hotel & Apartments</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#apartments">Apartments</a></li>
+            <li><a href="#calculator">Rate Calculator</a></li>
+            <li><a href="#contact" class="btn-primary">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Experience Premium Comfort & Hospitality</h1>
+            <p>Modern luxury apartments and standard rooms designed for short-term and extended stays.</p>
+            <a href="#apartments" class="btn-hero">Explore Accommodation</a>
+        </div>
+    </header>
+
+    <!-- Apartments Showcase -->
+    <section id="apartments" class="container">
+        <h2 class="section-title">Our Accommodation Categories</h2>
+        <div class="card-grid">
+            
+            <div class="card">
+                <div class="card-header">Standard Room</div>
+                <div class="card-body">
+                    <p class="price">KES 1,755 <span>/ night</span></p>
+                    <ul>
+                        <li>1 Queen Bed</li>
+                        <li>High-Speed Wi-Fi</li>
+                        <li>En-suite Bathroom</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">Deluxe Studio / 1-Bed</div>
+                <div class="card-body">
+                    <p class="price">KES 2,195 <span>/ night</span></p>
+                    <ul>
+                        <li>1 King Bed & Sitting Area</li>
+                        <li>Kitchenette</li>
+                        <li>High-Speed Wi-Fi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card card-featured">
+                <div class="badge">Popular</div>
+                <div class="card-header">Executive 1-Bed</div>
+                <div class="card-body">
+                    <p class="price">KES 2,633 <span>/ night</span></p>
+                    <ul>
+                        <li>Separate Living Room</li>
+                        <li>Fully Equipped Kitchen</li>
+                        <li>Balcony View</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">2-Bedroom Apartment</div>
+                <div class="card-body">
+                    <p class="price">KES 3,510 <span>/ night</span></p>
+                    <ul>
+                        <li>2 Bedrooms (En-suite)</li>
+                        <li>Spacious Living Room</li>
+                        <li>Full Kitchen & Dining Area</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Calculator -->
+    <section id="calculator" class="bg-light">
+        <div class="container">
+            <h2 class="section-title">Estimate Your Stay</h2>
+            <div class="calculator-box">
+                <div class="form-group">
+                    <label for="roomType">Select Accommodation:</label>
+                    <select id="roomType">
+                        <option value="1755">Standard Room (KES 1,755/night)</option>
+                        <option value="2195">Deluxe Studio (KES 2,195/night)</option>
+                        <option value="2633">Executive 1-Bed (KES 2,633/night)</option>
+                        <option value="3510">2-Bedroom Apartment (KES 3,510/night)</option>
+                        <option value="4388">3-Bedroom Suite (KES 4,388/night)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nights">Number of Nights:</label>
+                    <input type="number" id="nights" min="1" value="1">
+                </div>
+
+                <div class="result-box">
+                    <h3>Total Estimated Cost:</h3>
+                    <p id="totalPrice">KES 1,755.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 London Hotel & Apartments. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.bg-light {
+    background-color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #111827;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: #2563eb;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #fff !important;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80') center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.btn-hero {
+    display: inline-block;
+    margin-top: 20px;
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Cards */
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    padding: 24px;
+}
+
+.card-featured {
+    border: 2px solid #2563eb;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.card-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.price span {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.card-body ul {
+    list-style: none;
+}
+
+.card-body li {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 8px;
+}
+
+/* Calculator */
+.calculator-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f9fafb;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-group select, .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.result-box {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.result-box h3 {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+#totalPrice {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: #9ca3af;
+    font-size: 0.85rem;
+}
+document.addEventListener("DOMContentLoaded", () => {
+    const roomTypeSelect = document.getElementById("roomType");
+    const nightsInput = document.getElementById("nights");
+    const totalPriceDisplay = document.getElementById("totalPrice");
+
+    function calculateTotal() {
+        const ratePerNight = parseFloat(roomTypeSelect.value);
+        let nights = parseInt(nightsInput.value);
+
+        if (isNaN(nights) || nights < 1) {
+            nights = 1;
+        }
+
+        const total = ratePerNight * nights;
+        
+        // Format to local currency format (KES)
+        totalPriceDisplay.textContent = `KES ${total.toLocaleString('en-KE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    }
+
+    roomTypeSelect.addEventListener("change", calculateTotal);
+    nightsInput.addEventListener("input", calculateTotal);
+});
